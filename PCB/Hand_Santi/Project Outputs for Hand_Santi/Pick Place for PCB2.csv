@@ -1,0 +1,29 @@
+Altium Designer Pick and Place Locations
+D:\Projects+(2)\Brown_Hand_Santinizer\PCB\Hand_Santi\Project Outputs for Hand_Santi\Pick Place for PCB2.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       13/06/24
+Time:       21:37
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+"Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"U3","Pin_1*14","TopLayer","Pin_1*14","3350.000","3839.999","0",""
+"U2","FC-135 32.7680KA-AC","TopLayer","CRYSTAL-SMD_L3.2-W1.5","4595.000","3702.400","270","FC-135 32.7680KA-AC"
+"U1","STM32L011F4U6TR","TopLayer","STM32L011F4","4354.999","3695.001","0",""
+"SW1","Switch","TopLayer","Switch","4925.000","3680.000","90",""
+"RESET1","Button_5P","TopLayer","Button_3.3x3.3mm","5119.999","3575.000","90",""
+"R4","10K","TopLayer","R0603","4795.000","3500.000","90",""
+"R3","22K","TopLayer","R0603","4325.000","3891.481","270",""
+"R2","47K","TopLayer","R0603","4404.541","3891.481","90",""
+"R1","10K","TopLayer","R0603","5125.000","3790.000","180",""
+"C7","10uF","TopLayer","C0402","4235.000","3705.000","270",""
+"C6","100nF","TopLayer","C0402","4165.000","3705.000","270",""
+"C5","1uF","TopLayer","C0402","4550.000","3910.000","270",""
+"C4","100nF","TopLayer","C0402","4625.000","3910.000","270",""
+"C3","9pF","TopLayer","C0402","4510.000","3760.000","270",""
+"C2","9pF","TopLayer","C0402","4610.000","3575.000","180",""
+"C1","100nF","TopLayer","C0402","5121.460","3725.000","180",""
