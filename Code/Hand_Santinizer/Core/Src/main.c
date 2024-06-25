@@ -107,6 +107,8 @@ int main(void)
 	SSD1331_Init();
 	
 	HAL_Delay(100);
+	
+	HAL_ADC_Start_IT(&hadc);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -135,6 +137,7 @@ int main(void)
 				Time_Increase();
 				
 				//Refresh the screen
+				Screen_SetTime(time_min, time_sec);
 			}
     /* USER CODE END WHILE */
 
