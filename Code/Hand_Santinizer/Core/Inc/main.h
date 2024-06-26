@@ -32,6 +32,7 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ssd1331.h"
+//#include "SEGGER_RTT.h"
 #include <stdbool.h>
 #include <math.h>
 #include <stdlib.h>

@@ -104,6 +104,8 @@ int main(void)
   MX_ADC_Init();
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
+//	SEGGER_RTT_Init();
+	
 	SSD1331_Init();
 	
 	HAL_Delay(100);

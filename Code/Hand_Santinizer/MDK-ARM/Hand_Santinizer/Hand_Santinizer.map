@@ -1072,6 +1072,161 @@ Section Cross References
     system_stm32l0xx.o(.text.SystemCoreClockUpdate) refers to system_stm32l0xx.o(.data.SystemCoreClock) for SystemCoreClock
     system_stm32l0xx.o(.text.SystemCoreClockUpdate) refers to system_stm32l0xx.o(.rodata.AHBPrescTable) for AHBPrescTable
     system_stm32l0xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32l0xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBufferNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ReadNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ReadUpBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock) for SEGGER_RTT_ReadUpBufferNoLock
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_ReadUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Read) refers to segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) for SEGGER_RTT_ReadNoLock
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_Read) refers to segger_rtt.o(.text.SEGGER_RTT_Read) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteWithOverwriteNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteSkipNoLock) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_WriteSkipNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteSkipNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_WriteSkipNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBufferNoLock) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBufferNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBufferNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_WriteDownBufferNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteNoLock) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_WriteNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_WriteNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_WriteDownBufferNoLock) for SEGGER_RTT_WriteDownBufferNoLock
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Write) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_Write) refers to segger_rtt.o(.text.SEGGER_RTT_WriteNoLock) for SEGGER_RTT_WriteNoLock
+    segger_rtt.o(.text.SEGGER_RTT_Write) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_Write) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Write) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Write) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_Write) refers to segger_rtt.o(.text.SEGGER_RTT_Write) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to strlen.o(.text) for strlen
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to segger_rtt.o(.text.SEGGER_RTT_WriteNoLock) for SEGGER_RTT_WriteNoLock
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WriteString) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteString) refers to segger_rtt.o(.text.SEGGER_RTT_WriteString) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutCharSkipNoLock) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkipNoLock) refers to segger_rtt.o(.text.SEGGER_RTT_PutCharSkipNoLock) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutCharSkip) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_PutCharSkip) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_PutCharSkip) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutCharSkip) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutCharSkip) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkip) refers to segger_rtt.o(.text.SEGGER_RTT_PutCharSkip) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutChar) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_PutChar) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_PutChar) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutChar) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_PutChar) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_PutChar) refers to segger_rtt.o(.text.SEGGER_RTT_PutChar) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_GetKey) refers to segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) for SEGGER_RTT_ReadNoLock
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_GetKey) refers to segger_rtt.o(.text.SEGGER_RTT_GetKey) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_WaitKey) refers to segger_rtt.o(.text.SEGGER_RTT_ReadNoLock) for SEGGER_RTT_ReadNoLock
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WaitKey) refers to segger_rtt.o(.text.SEGGER_RTT_WaitKey) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_HasKey) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_HasKey) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_HasKey) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_HasKey) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_HasKey) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_HasKey) refers to segger_rtt.o(.text.SEGGER_RTT_HasKey) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_HasData) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_HasData) refers to segger_rtt.o(.text.SEGGER_RTT_HasData) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_HasDataUp) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_HasDataUp) refers to segger_rtt.o(.text.SEGGER_RTT_HasDataUp) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_AllocDownBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_AllocUpBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ConfigUpBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ConfigDownBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetNameUpBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetNameDownBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsUpBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsDownBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Init) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_Init) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_Init) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Init) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_Init) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_Init) refers to segger_rtt.o(.text.SEGGER_RTT_Init) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_SetTerminal) refers to segger_rtt.o(.rodata.cst16) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetTerminal) refers to segger_rtt.o(.text.SEGGER_RTT_SetTerminal) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to rt_memclr.o(.text) for __aeabi_memclr4
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to strlen.o(.text) for strlen
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to rt_memcpy.o(.text) for __aeabi_memcpy
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to segger_rtt.o(.rodata.str1.1) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to segger_rtt.o(.bss._acUpBuffer) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to segger_rtt.o(.bss..L_MergedGlobals) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_TerminalOut) refers to segger_rtt.o(.rodata.cst16) for [Anonymous Symbol]
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_TerminalOut) refers to segger_rtt.o(.text.SEGGER_RTT_TerminalOut) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_GetAvailWriteSpace) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_GetAvailWriteSpace) refers to segger_rtt.o(.text.SEGGER_RTT_GetAvailWriteSpace) for [Anonymous Symbol]
+    segger_rtt.o(.text.SEGGER_RTT_GetBytesInBuffer) refers to segger_rtt.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_GetBytesInBuffer) refers to segger_rtt.o(.text.SEGGER_RTT_GetBytesInBuffer) for [Anonymous Symbol]
     __2sprintf.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
     __2sprintf.o(.text) refers to _sputc.o(.text) for _sputc
     noretval__2sprintf.o(.text) refers to _printf_char_common.o(.text) for _printf_char_common
@@ -1096,6 +1251,7 @@ Section Cross References
     __printf_flags_ss_wp.o(.text) refers to __printf_flags_ss_wp.o(.constdata) for .constdata
     _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
     _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) refers (Special) to _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017) for _printf_percent_end
+    rt_memcpy.o(.text) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
@@ -2028,8 +2184,78 @@ Removing Unused input sections from the image.
     Removing system_stm32l0xx.o(.text.SystemCoreClockUpdate), (168 bytes).
     Removing system_stm32l0xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
     Removing system_stm32l0xx.o(.rodata.APBPrescTable), (8 bytes).
+    Removing segger_rtt.o(.text), (0 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_ReadUpBufferNoLock), (252 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBufferNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_ReadNoLock), (252 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ReadNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_ReadUpBuffer), (26 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_Read), (26 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_Read), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock), (264 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteWithOverwriteNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WriteSkipNoLock), (112 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteSkipNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WriteDownBufferNoLock), (320 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBufferNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WriteNoLock), (376 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WriteDownBuffer), (164 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_Write), (164 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_Write), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WriteString), (168 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WriteString), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_PutCharSkipNoLock), (56 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkipNoLock), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_PutCharSkip), (196 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkip), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_PutChar), (224 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_PutChar), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_GetKey), (48 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_GetKey), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_WaitKey), (40 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_WaitKey), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_HasKey), (140 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_HasKey), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_HasData), (20 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_HasData), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_HasDataUp), (20 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_HasDataUp), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_AllocDownBuffer), (348 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_AllocDownBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_AllocUpBuffer), (352 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_AllocUpBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_ConfigUpBuffer), (200 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ConfigUpBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_ConfigDownBuffer), (200 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_ConfigDownBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_SetNameUpBuffer), (164 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetNameUpBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_SetNameDownBuffer), (164 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetNameDownBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_SetFlagsUpBuffer), (164 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsUpBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_SetFlagsDownBuffer), (164 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsDownBuffer), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_Init), (124 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_Init), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_SetTerminal), (368 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_SetTerminal), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_TerminalOut), (1176 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_TerminalOut), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_GetAvailWriteSpace), (36 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_GetAvailWriteSpace), (8 bytes).
+    Removing segger_rtt.o(.text.SEGGER_RTT_GetBytesInBuffer), (32 bytes).
+    Removing segger_rtt.o(.ARM.exidx.text.SEGGER_RTT_GetBytesInBuffer), (8 bytes).
+    Removing segger_rtt.o(.bss._SEGGER_RTT), (168 bytes).
+    Removing segger_rtt.o(.rodata.cst16), (16 bytes).
+    Removing segger_rtt.o(.rodata.str1.1), (9 bytes).
+    Removing segger_rtt.o(.bss._acUpBuffer), (1024 bytes).
+    Removing segger_rtt.o(.bss..L_MergedGlobals), (17 bytes).
 
-813 unused section(s) (total 47684 bytes) removed from the image.
+883 unused section(s) (total 55534 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2079,6 +2305,8 @@ Image Symbol Table
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
     ../clib/memcpset.c                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __2sprintf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  noretval__2sprintf.o ABSOLUTE
@@ -2118,6 +2346,7 @@ Image Symbol Table
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  strlen.o ABSOLUTE
     ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
+    SEGGER_RTT.c                             0x00000000   Number         0  segger_rtt.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     main.c                                   0x00000000   Number         0  main.o ABSOLUTE
     ssd1331.c                                0x00000000   Number         0  ssd1331.o ABSOLUTE
@@ -2597,75 +2826,75 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000c0   Data   RO            3    RESET               startup_stm32l011xx.o
-    0x080000c0   0x080000c0   0x00000008   Code   RO         1100  * !!!main             c_p.l(__main.o)
-    0x080000c8   0x080000c8   0x0000003c   Code   RO         1288    !!!scatter          c_p.l(__scatter.o)
-    0x08000104   0x08000104   0x0000001a   Code   RO         1290    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x080000c0   0x080000c0   0x00000008   Code   RO         1181  * !!!main             c_p.l(__main.o)
+    0x080000c8   0x080000c8   0x0000003c   Code   RO         1369    !!!scatter          c_p.l(__scatter.o)
+    0x08000104   0x08000104   0x0000001a   Code   RO         1371    !!handler_copy      c_p.l(__scatter_copy.o)
     0x0800011e   0x0800011e   0x00000002   PAD
-    0x08000120   0x08000120   0x0000001c   Code   RO         1292    !!handler_zi        c_p.l(__scatter_zi.o)
-    0x0800013c   0x0800013c   0x00000002   Code   RO         1085    .ARM.Collect$$_printf_percent$$00000000  c_p.l(_printf_percent.o)
-    0x0800013e   0x0800013e   0x0000000a   Code   RO         1084    .ARM.Collect$$_printf_percent$$00000009  c_p.l(_printf_d.o)
-    0x08000148   0x08000148   0x00000004   Code   RO         1113    .ARM.Collect$$_printf_percent$$00000017  c_p.l(_printf_percent_end.o)
-    0x0800014c   0x0800014c   0x00000002   Code   RO         1149    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1163    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1165    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1167    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1170    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1172    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1174    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1177    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1179    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1181    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1183    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1185    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1187    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1189    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1191    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1193    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1195    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1197    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1201    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1203    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1205    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000000   Code   RO         1207    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
-    0x0800014e   0x0800014e   0x00000002   Code   RO         1208    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
-    0x08000150   0x08000150   0x00000002   Code   RO         1243    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
-    0x08000152   0x08000152   0x00000000   Code   RO         1271    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
-    0x08000152   0x08000152   0x00000000   Code   RO         1273    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
-    0x08000152   0x08000152   0x00000000   Code   RO         1276    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
-    0x08000152   0x08000152   0x00000000   Code   RO         1279    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
-    0x08000152   0x08000152   0x00000000   Code   RO         1281    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
-    0x08000152   0x08000152   0x00000000   Code   RO         1284    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
-    0x08000152   0x08000152   0x00000002   Code   RO         1285    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
-    0x08000154   0x08000154   0x00000000   Code   RO         1102    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
-    0x08000154   0x08000154   0x00000000   Code   RO         1117    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
-    0x08000154   0x08000154   0x00000006   Code   RO         1129    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
-    0x0800015a   0x0800015a   0x00000000   Code   RO         1119    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
-    0x0800015a   0x0800015a   0x00000004   Code   RO         1120    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
-    0x0800015e   0x0800015e   0x00000000   Code   RO         1122    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
-    0x0800015e   0x0800015e   0x00000008   Code   RO         1123    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
-    0x08000166   0x08000166   0x00000002   Code   RO         1154    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
-    0x08000168   0x08000168   0x00000000   Code   RO         1214    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
-    0x08000168   0x08000168   0x00000004   Code   RO         1215    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
-    0x0800016c   0x0800016c   0x00000006   Code   RO         1216    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x08000120   0x08000120   0x0000001c   Code   RO         1373    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x0800013c   0x0800013c   0x00000002   Code   RO         1162    .ARM.Collect$$_printf_percent$$00000000  c_p.l(_printf_percent.o)
+    0x0800013e   0x0800013e   0x0000000a   Code   RO         1161    .ARM.Collect$$_printf_percent$$00000009  c_p.l(_printf_d.o)
+    0x08000148   0x08000148   0x00000004   Code   RO         1194    .ARM.Collect$$_printf_percent$$00000017  c_p.l(_printf_percent_end.o)
+    0x0800014c   0x0800014c   0x00000002   Code   RO         1230    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1244    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1246    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1248    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1251    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1253    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1255    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1258    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1260    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1262    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1264    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1266    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1268    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1270    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1272    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1274    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1276    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1278    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1282    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1284    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1286    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000000   Code   RO         1288    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
+    0x0800014e   0x0800014e   0x00000002   Code   RO         1289    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
+    0x08000150   0x08000150   0x00000002   Code   RO         1324    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x08000152   0x08000152   0x00000000   Code   RO         1352    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x08000152   0x08000152   0x00000000   Code   RO         1354    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x08000152   0x08000152   0x00000000   Code   RO         1357    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x08000152   0x08000152   0x00000000   Code   RO         1360    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x08000152   0x08000152   0x00000000   Code   RO         1362    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x08000152   0x08000152   0x00000000   Code   RO         1365    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x08000152   0x08000152   0x00000002   Code   RO         1366    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x08000154   0x08000154   0x00000000   Code   RO         1183    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x08000154   0x08000154   0x00000000   Code   RO         1198    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x08000154   0x08000154   0x00000006   Code   RO         1210    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x0800015a   0x0800015a   0x00000000   Code   RO         1200    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x0800015a   0x0800015a   0x00000004   Code   RO         1201    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x0800015e   0x0800015e   0x00000000   Code   RO         1203    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x0800015e   0x0800015e   0x00000008   Code   RO         1204    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x08000166   0x08000166   0x00000002   Code   RO         1235    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x08000168   0x08000168   0x00000000   Code   RO         1295    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x08000168   0x08000168   0x00000004   Code   RO         1296    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x0800016c   0x0800016c   0x00000006   Code   RO         1297    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x08000172   0x08000172   0x00000002   PAD
     0x08000174   0x08000174   0x00000074   Code   RO            4    .text               startup_stm32l011xx.o
-    0x080001e8   0x080001e8   0x00000028   Code   RO         1058    .text               c_p.l(noretval__2sprintf.o)
-    0x08000210   0x08000210   0x0000006c   Code   RO         1060    .text               c_p.l(__printf.o)
-    0x0800027c   0x0800027c   0x0000006c   Code   RO         1062    .text               c_p.l(_printf_dec.o)
-    0x080002e8   0x080002e8   0x00000044   Code   RO         1086    .text               c_p.l(strlen.o)
-    0x0800032c   0x0800032c   0x00000040   Code   RO         1088    .text               c_p.l(rt_memclr.o)
-    0x0800036c   0x0800036c   0x00000006   Code   RO         1098    .text               c_p.l(heapauxi.o)
-    0x08000372   0x08000372   0x000000b0   Code   RO         1107    .text               c_p.l(_printf_intcommon.o)
+    0x080001e8   0x080001e8   0x00000028   Code   RO         1135    .text               c_p.l(noretval__2sprintf.o)
+    0x08000210   0x08000210   0x0000006c   Code   RO         1137    .text               c_p.l(__printf.o)
+    0x0800027c   0x0800027c   0x0000006c   Code   RO         1139    .text               c_p.l(_printf_dec.o)
+    0x080002e8   0x080002e8   0x00000044   Code   RO         1163    .text               c_p.l(strlen.o)
+    0x0800032c   0x0800032c   0x00000040   Code   RO         1169    .text               c_p.l(rt_memclr.o)
+    0x0800036c   0x0800036c   0x00000006   Code   RO         1179    .text               c_p.l(heapauxi.o)
+    0x08000372   0x08000372   0x000000b0   Code   RO         1188    .text               c_p.l(_printf_intcommon.o)
     0x08000422   0x08000422   0x00000002   PAD
-    0x08000424   0x08000424   0x00000030   Code   RO         1109    .text               c_p.l(_printf_char_common.o)
-    0x08000454   0x08000454   0x0000000a   Code   RO         1111    .text               c_p.l(_sputc.o)
-    0x0800045e   0x0800045e   0x00000028   Code   RO         1114    .text               c_p.l(rtudiv10.o)
-    0x08000486   0x08000486   0x0000003e   Code   RO         1135    .text               c_p.l(sys_stackheap_outer.o)
-    0x080004c4   0x080004c4   0x00000010   Code   RO         1138    .text               c_p.l(exit.o)
-    0x080004d4   0x080004d4   0x00000008   Code   RO         1150    .text               c_p.l(libspace.o)
-    0x080004dc   0x080004dc   0x0000000c   Code   RO         1209    .text               c_p.l(sys_exit.o)
-    0x080004e8   0x080004e8   0x00000002   Code   RO         1232    .text               c_p.l(use_no_semi.o)
-    0x080004ea   0x080004ea   0x00000000   Code   RO         1234    .text               c_p.l(indicate_semi.o)
+    0x08000424   0x08000424   0x00000030   Code   RO         1190    .text               c_p.l(_printf_char_common.o)
+    0x08000454   0x08000454   0x0000000a   Code   RO         1192    .text               c_p.l(_sputc.o)
+    0x0800045e   0x0800045e   0x00000028   Code   RO         1195    .text               c_p.l(rtudiv10.o)
+    0x08000486   0x08000486   0x0000003e   Code   RO         1216    .text               c_p.l(sys_stackheap_outer.o)
+    0x080004c4   0x080004c4   0x00000010   Code   RO         1219    .text               c_p.l(exit.o)
+    0x080004d4   0x080004d4   0x00000008   Code   RO         1231    .text               c_p.l(libspace.o)
+    0x080004dc   0x080004dc   0x0000000c   Code   RO         1290    .text               c_p.l(sys_exit.o)
+    0x080004e8   0x080004e8   0x00000002   Code   RO         1313    .text               c_p.l(use_no_semi.o)
+    0x080004ea   0x080004ea   0x00000000   Code   RO         1315    .text               c_p.l(indicate_semi.o)
     0x080004ea   0x080004ea   0x00000002   PAD
     0x080004ec   0x080004ec   0x00000010   Code   RO          109    .text.ADC1_COMP_IRQHandler  stm32l0xx_it.o
     0x080004fc   0x080004fc   0x000000b4   Code   RO          150    .text.ADC_Enable    stm32l0xx_hal_adc.o
@@ -2723,7 +2952,7 @@ Memory Map of the image
     0x0800283c   0x0800283c   0x00000002   Code   RO         1039    .text.SystemInit    system_stm32l0xx.o
     0x0800283e   0x0800283e   0x00000002   PAD
     0x08002840   0x08002840   0x00000324   Code   RO           65    .text.main          main.o
-    0x08002b64   0x08002b64   0x000001f6   Code   RO         1091    .text_divfast       c_p.l(aeabi_sdivfast.o)
+    0x08002b64   0x08002b64   0x000001f6   Code   RO         1172    .text_divfast       c_p.l(aeabi_sdivfast.o)
     0x08002d5a   0x08002d5a   0x00000010   Data   RO         1044    .rodata.AHBPrescTable  system_stm32l0xx.o
     0x08002d6a   0x08002d6a   0x00000002   PAD
     0x08002d6c   0x08002d6c   0x0000000c   Data   RO           83    .rodata.Font_9_Serif  main.o
@@ -2732,7 +2961,7 @@ Memory Map of the image
     0x080034a8   0x080034a8   0x00000009   Data   RO         1046    .rodata.PLLMulTable  system_stm32l0xx.o
     0x080034b1   0x080034b1   0x0000000e   Data   RO           85    .rodata.str1.1      main.o
     0x080034bf   0x080034bf   0x00000001   PAD
-    0x080034c0   0x080034c0   0x00000020   Data   RO         1287    Region$$Table       anon$$obj.o
+    0x080034c0   0x080034c0   0x00000020   Data   RO         1368    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080034e0, Size: 0x00000758, Max: 0x00000800, ABSOLUTE)
@@ -2742,7 +2971,7 @@ Memory Map of the image
     0x20000000   0x080034e0   0x00000008   Data   RW          285    .data..L_MergedGlobals  stm32l0xx_hal.o
     0x20000008   0x080034e8   0x00000004   Data   RW         1043    .data.SystemCoreClock  system_stm32l0xx.o
     0x2000000c   0x080034ec   0x00000004   PAD
-    0x20000010        -       0x00000060   Zero   RW         1151    .bss                c_p.l(libspace.o)
+    0x20000010        -       0x00000060   Zero   RW         1232    .bss                c_p.l(libspace.o)
     0x20000070        -       0x00000030   Zero   RW           88    .bss..L_MergedGlobals  main.o
     0x200000a0        -       0x0000005c   Zero   RW           84    .bss.hadc           main.o
     0x200000fc        -       0x00000058   Zero   RW           86    .bss.hspi1          main.o
