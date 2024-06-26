@@ -1,0 +1,8 @@
+Added Component: Designator=UART(Pin1x2_2.54mm)
+Added Pin To Net: NetName=UART_RX Pin=U1-5
+Added Pin To Net: NetName=UART_RX Pin=UART-1
+Added Net: Name=UART_RX
+Added Pin To Net: NetName=UART_TX Pin=U1-6
+Added Pin To Net: NetName=UART_TX Pin=UART-2
+Added Net: Name=UART_TX
+Added Member To Class: ClassName=Sheet1 Member=Component UART Pin_1x2

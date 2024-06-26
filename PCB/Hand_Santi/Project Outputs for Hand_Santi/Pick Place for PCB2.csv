@@ -1,16 +1,17 @@
 Altium Designer Pick and Place Locations
-D:\Projects+(2)\Brown_Hand_Santinizer\PCB\Hand_Santi\Project Outputs for Hand_Santi\Pick Place for PCB2.csv
+D:\Projects+(2)\Brown_Hand_Santinizer\Hand_Sanitizer\PCB\Hand_Santi\Project Outputs for Hand_Santi\Pick Place for PCB2.csv
 
 ========================================================================================================================
 File Design Information:
 
-Date:       13/06/24
-Time:       21:37
-Revision:   Not in VersionControl
+Date:       26/06/24
+Time:       13:28
+Revision:   0ad0b1ff36a64eeb5a6af0bb4aeb8ecfddff7dd1
 Variant:    No variations
 Units used: mil
 
 "Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"","Pin_1x2","TopLayer","Pin1x2_2.54mm","5170.000","3890.000","180",""
 "U3","Pin_1*14","TopLayer","Pin_1*14","3350.000","3839.999","0",""
 "U2","FC-135 32.7680KA-AC","TopLayer","CRYSTAL-SMD_L3.2-W1.5","4595.000","3702.400","270","FC-135 32.7680KA-AC"
 "U1","STM32L011F4U6TR","TopLayer","STM32L011F4","4354.999","3695.001","0",""
