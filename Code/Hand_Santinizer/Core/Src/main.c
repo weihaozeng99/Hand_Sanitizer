@@ -49,8 +49,10 @@ SPI_HandleTypeDef hspi1;
 /* USER CODE BEGIN PV */
 bool ADC_WDG_SET = false;
 bool RTC_WAKEUP_SET = false;
+bool LED_OFF = false;
 int  time_min = 0;
 int  time_sec = 0;
+uint16_t ADC_value=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,7 +61,6 @@ static void MX_GPIO_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_ADC_Init(void);
 static void MX_RTC_Init(void);
-
 /* USER CODE BEGIN PFP */
 void Time_Increase(void);
 void Screen_Reset(void);
@@ -104,11 +105,18 @@ int main(void)
   MX_ADC_Init();
   MX_RTC_Init();
   /* USER CODE BEGIN 2 */
-//	SEGGER_RTT_Init();
+//	SEGGER_RT 
 	
 	SSD1331_Init();
 	
 	HAL_Delay(100);
+	
+//	while(1){
+//	
+//	Screen_SetTime(time_min, time_sec);
+//	HAL_Delay(5000);	
+//	Screen_Reset();
+//	}
 	
 	HAL_ADC_Start_IT(&hadc);
   /* USER CODE END 2 */
@@ -117,21 +125,23 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-			HAL_SuspendTick();
-      HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 1, RTC_WAKEUPCLOCK_CK_SPRE_16BITS);
-		
-			// Enter STOP mode
-//			HAL_PWREx_EnterSTOP2Mode(PWR_STOPENTRY_WFI);
-			
-			// Wakeup by RTC after 1s
-			HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
-			SystemClock_Config();
-			HAL_ResumeTick();
+//			HAL_SuspendTick();
+//      HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 1, RTC_WAKEUPCLOCK_CK_SPRE_16BITS);
+//		
+//			// Enter STOP mode
+//			HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
+//			
+//			// Wakeup by RTC after 1s
+//			HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
+//			SystemClock_Config();
+//			HAL_ResumeTick();
+//			HAL_ADC_Start(&hadc);
 			if (ADC_WDG_SET == true)
 			{
 				ADC_WDG_SET = false;
 				// Reset the stop watch
 				Screen_Reset();
+					
 			}
 			if (RTC_WAKEUP_SET == true)
 			{
@@ -141,6 +151,10 @@ int main(void)
 				//Refresh the screen
 				Screen_SetTime(time_min, time_sec);
 			}
+			
+				HAL_ADC_Stop(&hadc);
+				HAL_Delay(100);
+				HAL_ADC_Start_IT(&hadc);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -174,7 +188,10 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.LSEState = RCC_LSE_ON;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_3;
+  RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -184,12 +201,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -199,6 +216,10 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
+  /** Enables the Clock Security System
+  */
+  HAL_RCCEx_EnableLSECSS();
 }
 
 /**
@@ -214,7 +235,6 @@ static void MX_ADC_Init(void)
   /* USER CODE END ADC_Init 0 */
 
   ADC_ChannelConfTypeDef sConfig = {0};
-  ADC_AnalogWDGConfTypeDef AnalogWDGConfig = {0};
 
   /* USER CODE BEGIN ADC_Init 1 */
 
@@ -224,12 +244,12 @@ static void MX_ADC_Init(void)
   */
   hadc.Instance = ADC1;
   hadc.Init.OversamplingMode = DISABLE;
-  hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV64;
-  hadc.Init.Resolution = ADC_RESOLUTION_8B;
-  hadc.Init.SamplingTime = ADC_SAMPLETIME_160CYCLES_5;
+  hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV12;
+  hadc.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc.Init.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
-  hadc.Init.ContinuousConvMode = ENABLE;
+  hadc.Init.ContinuousConvMode = DISABLE;
   hadc.Init.DiscontinuousConvMode = DISABLE;
   hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -252,18 +272,6 @@ static void MX_ADC_Init(void)
   {
     Error_Handler();
   }
-
-  /** Configure the analog watchdog
-  */
-  AnalogWDGConfig.WatchdogMode = ADC_ANALOGWATCHDOG_SINGLE_REG;
-  AnalogWDGConfig.Channel = ADC_CHANNEL_4;
-  AnalogWDGConfig.ITMode = ENABLE;
-  AnalogWDGConfig.HighThreshold = 100;
-  AnalogWDGConfig.LowThreshold = 0;
-  if (HAL_ADC_AnalogWDGConfig(&hadc, &AnalogWDGConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
   /* USER CODE BEGIN ADC_Init 2 */
 
   /* USER CODE END ADC_Init 2 */
@@ -281,6 +289,10 @@ static void MX_RTC_Init(void)
   /* USER CODE BEGIN RTC_Init 0 */
 
   /* USER CODE END RTC_Init 0 */
+
+  RTC_TimeTypeDef sTime = {0};
+  RTC_DateTypeDef sDate = {0};
+  RTC_AlarmTypeDef sAlarm = {0};
 
   /* USER CODE BEGIN RTC_Init 1 */
 
@@ -301,9 +313,45 @@ static void MX_RTC_Init(void)
     Error_Handler();
   }
 
-  /** Enable the WakeUp
+  /* USER CODE BEGIN Check_RTC_BKUP */
+
+  /* USER CODE END Check_RTC_BKUP */
+
+  /** Initialize RTC and set the Time and Date
   */
-  if (HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 1, RTC_WAKEUPCLOCK_CK_SPRE_16BITS) != HAL_OK)
+  sTime.Hours = 0x0;
+  sTime.Minutes = 0x0;
+  sTime.Seconds = 0x0;
+  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
+  sDate.Month = RTC_MONTH_JANUARY;
+  sDate.Date = 0x1;
+  sDate.Year = 0x0;
+
+  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BCD) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Enable the Alarm A
+  */
+  sAlarm.AlarmTime.Hours = 0x0;
+  sAlarm.AlarmTime.Minutes = 0x0;
+  sAlarm.AlarmTime.Seconds = 0x1;
+  sAlarm.AlarmTime.SubSeconds = 0x0;
+  sAlarm.AlarmTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+  sAlarm.AlarmTime.StoreOperation = RTC_STOREOPERATION_RESET;
+  sAlarm.AlarmMask = RTC_ALARMMASK_ALL;
+  sAlarm.AlarmSubSecondMask = RTC_ALARMSUBSECONDMASK_ALL;
+  sAlarm.AlarmDateWeekDaySel = RTC_ALARMDATEWEEKDAYSEL_DATE;
+  sAlarm.AlarmDateWeekDay = 0x1;
+  sAlarm.Alarm = RTC_ALARM_A;
+  if (HAL_RTC_SetAlarm_IT(&hrtc, &sAlarm, RTC_FORMAT_BCD) != HAL_OK)
   {
     Error_Handler();
   }
@@ -336,7 +384,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -367,16 +415,46 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  /*Configure GPIO pins : PA0 PA1 PA9 PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_9|GPIO_PIN_10;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
+
+  /*Configure GPIO pins : PA0 PA1 PA9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_9;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB1 PB6 PB7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_6|GPIO_PIN_7;
+  /*Configure GPIO pin : PB1 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PB7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
@@ -401,42 +479,81 @@ void Screen_Reset(void)
 {
 	time_min = 0;
 	time_sec = 0;
-	LCD_Rect_Fill(0, 0, LCD_WIDTH, LCD_HEIGHT, GREEN);
-	LCD_Font(10, 60, "0 : 0", &Font_9_Serif, 1, WHITE);
+	LCD_Rect_Fill(0, 0, LCD_WIDTH-1, LCD_HEIGHT-1, GREEN);
+//	LCD_Font(11, 45, "0 : 0", &Font_9_Serif, 2, WHITE);
+	HAL_Delay(500);
 }
 
 void Screen_SetTime(int min, int sec)
 {
 	if (min == 0)
 	{
-		LCD_Rect_Fill(0, 0, LCD_WIDTH, LCD_HEIGHT, GREEN);
+		if (LED_OFF == true)
+		{
+			SSD1331_Init();
+			LED_OFF = false;
+		}
+		LCD_Rect_Fill(0, 0, LCD_WIDTH-1, LCD_HEIGHT-1, GREEN);
 	}
 	else if (min < 2)
 	{
-		LCD_Rect_Fill(0, 0, LCD_WIDTH, LCD_HEIGHT, YELLOW);
+		LCD_Rect_Fill(0, 0, LCD_WIDTH-1, LCD_HEIGHT-1, YELLOW);
 	}
 	else if (min < 3)
 	{
-		LCD_Rect_Fill(0, 0, LCD_WIDTH, LCD_HEIGHT, ORANGE);
+		LCD_Rect_Fill(0, 0, LCD_WIDTH-1, LCD_HEIGHT-1, ORANGE);
+	}
+	else if (min < 30)
+	{
+		LCD_Rect_Fill(0, 0, LCD_WIDTH-1, LCD_HEIGHT-1, RED);
 	}
 	else
 	{
-		LCD_Rect_Fill(0, 0, LCD_WIDTH, LCD_HEIGHT, RED);
+		LCD_Command(CMD_DISPLAY_OFF);
+		LED_OFF = true;
 	}
 	
+	HAL_Delay(5);
 	char buff[10];
-	sprintf(buff, "%d : %d", min, sec);
-	LCD_Font(10, 60, buff, &Font_9_Serif, 1, WHITE);
+	if (min<10)
+	{
+		sprintf(buff, "%d : %d", min, sec);
+		LCD_Font(11, 45, buff, &Font_9_Serif, 2, WHITE);
+	}
+	else
+	{
+		sprintf(buff, "%d", min);
+		LCD_Font(30, 45, buff, &Font_9_Serif, 2, WHITE);
+	}
 }
 
-void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc)
+//void HAL_ADC_LevelOutOfWindowCallback(ADC_HandleTypeDef *hadc)
+//{
+//	// TODO: need to reset the RCC?
+//	// Reset the stopwatch or set a flag for this
+//	ADC_value = HAL_ADC_GetValue(hadc);
+////	char buff[10];
+////	sprintf(buff, "%d ", ADC_value);
+////	LCD_Font(11, 45, buff, &Font_9_Serif, 2, WHITE);
+//	if (ADC_WDG_SET == false)
+//		ADC_WDG_SET = true;
+//	
+//}
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
-	// TODO: need to reset the RCC?
-	// Reset the stopwatch or set a flag for this
-	
-	ADC_WDG_SET = true;
+	ADC_value = HAL_ADC_GetValue(hadc);
+	if (ADC_value < 3000)
+//	if (ADC_value < 1)
+	{
+		if (ADC_WDG_SET == false)
+			ADC_WDG_SET = true;
+	}
 }
-
+void HAL_RTC_AlarmAEventCallback(RTC_HandleTypeDef *hrtc)
+{
+	if (RTC_WAKEUP_SET == false)
+		RTC_WAKEUP_SET = true;
+}
 void HAL_RTCEx_WakeUpTimerEventCallback(RTC_HandleTypeDef *hrtc)
 {
 	 RTC_WAKEUP_SET = true;

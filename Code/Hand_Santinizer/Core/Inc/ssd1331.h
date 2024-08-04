@@ -15,7 +15,7 @@
 
 #define	LCD_SPI hspi1
 // MISO NEEDED PUll-UP !!!
-#define SOFT_CS 0
+#define SOFT_CS 1
 #define LCD_CS_PORT	 GPIOA
 #define LCD_CS_PIN	 GPIO_PIN_10
 #define LCD_DC_PORT	 GPIOB
@@ -180,6 +180,7 @@ void SSD1331_enableScrolling(uint8_t enable);
 void SSD1331_setDisplayMode(DisplayMode mode);
 void SSD1331_setDisplayPower(DisplayPower power);
 void SSD1331_Init(void);
+void LCD_Command(uint8_t cmd);
 
 #ifdef __cplusplus
 }
